@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.13)
 project(AP)
 
 set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(GTest REQUIRED)
 
@@ -12,6 +13,6 @@ add_executable(main
         src/unit_test.cpp
 )
 target_link_libraries(main
-        GTest::GTest
-        GTest::Main
+        GTest::gtest
+        GTest::gtest_main
 )
